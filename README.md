@@ -19,7 +19,7 @@ Welcome to the **Text Emotion Detection** project! This repository contains a Py
    ```
 2. **Create a virtual environment**:
    ```bash
-   python -3.13 -m venv venv
+   py -3.13 -m venv venv
    ```
 3. **Activate the virtual environment**:
    ```bash
