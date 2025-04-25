@@ -1,0 +1,15 @@
+jalankan command dibawah pada terminal directory folder "Text Emotion Detection"
+
+pastikan menggunakan python 3.13
+
+1. membuat virtual environment
+python -3.13 -m venv venv
+
+2. mengaktifkan environment
+.\venv\Scripts\activate
+
+3. install dependency / library yang dibutuhkan
+pip install -r requirements.txt
+
+4. Deploy website pada local host
+flask run

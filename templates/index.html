@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Emotion Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+  </head>
+  <body>
+    <div class="contentbox">
+      <div class="header"><h1>Text Emotion Detection</h1></div>
+
+      <form action="/predict" method="post" class="the-form">
+        <textarea
+          name="text"
+          rows="5"
+          cols="50"
+          placeholder="Type your text here..."
+        ></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

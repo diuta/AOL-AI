@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emotion Prediction Result</title>
+    <link
+      rel="stylesheet"
+      href="../static/prediction.css"
+    />
+  </head>
+  <body>
+    <div class="result-container">
+      <div class="top">
+        <h1>Emotion Prediction Result</h1>
+        <p><strong>Input Text:</strong> {{ text }}</p>
+        <p class="emotion">
+          <strong>Predicted Emotion:</strong> {{ emotion }} {{ emoji }}
+        </p>
+        <p class="confidence">
+          <strong>Confidence:</strong> {{ confidence * 100 }}%
+        </p>
+      </div>
+
+      <div class="chart">
+        <h3>Emotion Probabilities:</h3>
+        <img src="{{ chart_url }}" alt="Emotion Probabilities" />
+      </div>
+
+      <div class="bottom">
+        <h3>Prediction Probabilities:</h3>
+        <ul>
+          {% for emotion, probability in probabilities.items() %}
+          <li>
+            <strong>{{ emotion }}:</strong> {{ (probability * 100) | round(2)
+            }}%
+          </li>
+          {% endfor %}
+        </ul>
+
+        <br />
+        <a href="/">Go Back</a>
+      </div>
+    </div>
+  </body>
+</html>
